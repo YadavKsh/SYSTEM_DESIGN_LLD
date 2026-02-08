@@ -4,7 +4,7 @@
 LLD majorly focuses on **classes** and **objects** within a system.
 
 <p align="center">
-  <img src="IMAGES/LEC_1/IMG_1.jpg" alt="Representation of LLD" width="85%" style="border-radius: 12px;"
+  <img src="../IMAGES/LEC_1/IMG_1.jpg" alt="Representation of LLD" width="85%" style="border-radius: 12px;"
 >
 </p>
 
@@ -16,7 +16,7 @@ LLD majorly focuses on **classes** and **objects** within a system.
 - Make the code **easy to test**
 
 <p align="center">
-  <img src="IMAGES/LEC_1/IMG_2.jpg" alt="Categories of Design Pattern" width="90%" style="border-radius: 12px;"
+  <img src="../IMAGES/LEC_1/IMG_2.jpg" alt="Categories of Design Pattern" width="90%" style="border-radius: 12px;"
 >
 </p>
 
@@ -78,7 +78,7 @@ Once the structure (skeleton) is created using **Structural Patterns**, the **co
 - Represents **inheritance**
 
 <p align="center">
-  <img src="IMAGES/LEC_1/IMG_3.jpg" alt="is-a Relationship" width="80%" style="border-radius: 12px;"
+  <img src="../IMAGES/LEC_1/IMG_3.jpg" alt="is-a Relationship" width="80%" style="border-radius: 12px;"
 >
 </p>
 
@@ -93,7 +93,7 @@ Once the structure (skeleton) is created using **Structural Patterns**, the **co
 - School has students
 
 <p align="center">
-  <img src="IMAGES/LEC_1/IMG_4.jpg" alt="has-a Relationship" width="85%" style="border-radius: 12px;"
+  <img src="../IMAGES/LEC_1/IMG_4.jpg" alt="has-a Relationship" width="85%" style="border-radius: 12px;"
 >
 </p>
 
@@ -103,7 +103,7 @@ Once the structure (skeleton) is created using **Structural Patterns**, the **co
 - Association is a **general term** for has-a relationships
 
 <p align="center">
-  <img src="IMAGES/LEC_1/IMG_5.jpg" alt="Association Representation" width="85%" style="border-radius: 12px;"
+  <img src="../IMAGES/LEC_1/IMG_5.jpg" alt="Association Representation" width="85%" style="border-radius: 12px;"
 >
 </p>
 
@@ -116,7 +116,7 @@ Once the structure (skeleton) is created using **Structural Patterns**, the **co
 - Example: *Library has books*
 
 <p align="center">
-  <img src="IMAGES/LEC_1/IMG_6.jpg" alt="Aggregation Example" width="80%" style="border-radius: 12px;"
+  <img src="../IMAGES/LEC_1/IMG_6.jpg" alt="Aggregation Example" width="80%" style="border-radius: 12px;"
 >
 </p>
 
@@ -140,7 +140,7 @@ public class Library {
 If the **House** does not exist, the **Room** objects also do not exist.
 
 <p align="center">
-  <img src="IMAGES/LEC_1/IMG_7.jpg" alt="Composition Example" width="80%" style="border-radius: 12px;"
+  <img src="../IMAGES/LEC_1/IMG_7.jpg" alt="Composition Example" width="80%" style="border-radius: 12px;"
 >
 </p>
 
