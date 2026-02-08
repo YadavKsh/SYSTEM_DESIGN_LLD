@@ -1,115 +1,152 @@
-- ### It majorly focuses on **classes** and **objects** withing a system.
+# Low Level Design (LLD)
 
-![Representation of LLD](IMAGES/LEC_1/IMG_1.jpg)
+## What LLD Focuses On
+LLD majorly focuses on **classes** and **objects** within a system.
 
-- ### Goal is :
-  - To write <u>*clean code*</u>.
-  - Code should be <u>*flexible*</u> and <u>*maintainable*</u>.
-  - Code should be <u>*easy to test*</u>.
-
-![Categories of Design Pattern](IMAGES/LEC_1/IMG_2.jpg)
-
-- ### CREATIONAL
-  - It controls the object creation.
-  - Various type of ***Creational Patterns*** are :
-    - *Singleton*
-    - *Builder*
-    - *Factory*
-    - *Abstract Factory*
-    - *Object Pool*
-    - *Prototype*
+<p align="center">
+  <img src="IMAGES/LEC_1/IMG_1.jpg" alt="Representation of LLD" width="85%">
+</p>
 
 ---
 
-- ### STRUCTURAL
-  - It focuses on, how different ***classes/objects*** are arranged together so that **larger problem** can be solved in **most flexible way**.
-  - Various patterns are : 
-    - *Decorator*
-    - *Proxy*
-    - *Composite*
-    - *Adapter*
-    - *Bridge*
-    - *Façade*
-    - *Flyweight*
+## Goals of LLD
+- Write **clean code**
+- Ensure the code is **flexible** and **maintainable**
+- Make the code **easy to test**
+
+<p align="center">
+  <img src="IMAGES/LEC_1/IMG_2.jpg" alt="Categories of Design Pattern" width="90%">
+</p>
 
 ---
 
-- ### BEHAVIOURAL
-  - It focuses on, how different ***objects communicate or interact*** with each other.
-  - Like in other words, with above Structural Pattern we created how the skeleton behaves (**coordination, responsibility, interaction**) is all guided by Behavioral Pattern.
-  - Various patterns are : 
-    - *State* 
-    - *Strategy*
-    - *Observer*
-    - *Chain of Responsibility*
-    - *Template*
-    - *Iterator*
-    - *Interpreter*
-    - *Command*
-    - *Visitor*
-    - *Mediator*
-    - *Memento*
-    - *Null Object*
+## Design Pattern Categories
+
+### Creational Patterns
+Creational patterns focus on **object creation**.
+
+**Common Creational Patterns:**
+- Singleton
+- Builder
+- Factory
+- Abstract Factory
+- Object Pool
+- Prototype
 
 ---
 
-# ***has-a AND is-a RELATIONSHIP***
-### ==========================================
+### Structural Patterns
+Structural patterns focus on how different **classes / objects** are arranged so that a **larger problem** can be solved in the **most flexible way**.
 
-- ### is-a
-  - This is nothing but *inheritance*.
-
-![Pictorial Representation of is-a Relationship](IMAGES/LEC_1/IMG_3.jpg)
-
-- ### has-a
-  - Shows a **link between 2 objects**.
-    - *House has rooms*.
-    - *Library has books*.
-    - *School has students* etc.
-
-![Types of Association](IMAGES/LEC_1/IMG_4.jpg)
+**Common Structural Patterns:**
+- Decorator
+- Proxy
+- Composite
+- Adapter
+- Bridge
+- Façade
+- Flyweight
 
 ---
 
-- ### Association
-  - General term for has-a relationship.
-  - *Association Representation*
+### Behavioral Patterns
+Behavioral patterns focus on how different **objects communicate or interact** with each other.
 
-![Types of Association](IMAGES/LEC_1/IMG_5.jpg)
+Once the structure (skeleton) is created using **Structural Patterns**, the **coordination, responsibility, and interaction** are governed by **Behavioral Patterns**.
+
+**Common Behavioral Patterns:**
+- State
+- Strategy
+- Observer
+- Chain of Responsibility
+- Template
+- Iterator
+- Interpreter
+- Command
+- Visitor
+- Mediator
+- Memento
+- Null Object
 
 ---
 
-# TYPES OF ASSOCIATION
-### ==========================================
+# has-a and is-a Relationship
 
-- ### Weak Relationship (*Aggregation*)
-  - ***Existence of one object is not dependent on another***.
-  - *Ex* : *Library hs books*.
+## is-a Relationship
+- Represents **inheritance**
 
-![Types of Association](IMAGES/LEC_1/IMG_6.jpg)
+<p align="center">
+  <img src="IMAGES/LEC_1/IMG_3.jpg" alt="is-a Relationship" width="80%">
+</p>
 
-  - Here both are independent of each other. If *books are not present, Library can still exist* and similarly if *Library does not exist, books can still exist alone*.
-  - ```java
-    public class Library{
-        List<Books> books;
-    }
-    
 ---
 
-- ### Strong Relationship (*Composition*)]
-  - ***Existence of one object is dependent on another***.
-  - *Ex* : *House has rooms*.
-  - Here **rooms existence depends on House**, *if House does not exist, room will also not exist*.
+## has-a Relationship
+- Represents a **relationship/link between two objects**
 
-![Types of Association](IMAGES/LEC_1/IMG_7.jpg)
+**Examples:**
+- House has rooms
+- Library has books
+- School has students
 
-  - ```java
-    public class House {
-      List<Rooms> rooms;
-      // also takes care of creation and managing of Room objects
-      public House(){
+<p align="center">
+  <img src="IMAGES/LEC_1/IMG_4.jpg" alt="has-a Relationship" width="85%">
+</p>
+
+---
+
+## Association
+- Association is a **general term** for has-a relationships
+
+<p align="center">
+  <img src="IMAGES/LEC_1/IMG_5.jpg" alt="Association Representation" width="85%">
+</p>
+
+---
+
+# Types of Association
+
+## Weak Relationship (Aggregation)
+- **Existence of one object is NOT dependent on another**
+- Example: *Library has books*
+
+<p align="center">
+  <img src="IMAGES/LEC_1/IMG_6.jpg" alt="Aggregation Example" width="80%">
+</p>
+
+**Explanation:**
+- Library can exist without books
+- Books can exist without the library
+
+```java
+public class Library {
+    List<Books> books;
+}
+```
+
+---
+
+## Strong Relationship (Composition)
+
+- **Existence of one object IS dependent on another**
+- Example: *House has rooms*
+
+If the **House** does not exist, the **Room** objects also do not exist.
+
+<p align="center">
+  <img src="IMAGES/LEC_1/IMG_7.jpg" alt="Composition Example" width="80%">
+</p>
+
+```java
+public class House {
+    List<Rooms> rooms;
+
+    // Responsible for creating and managing Room objects
+    public House() {
         rooms = new ArrayList<>();
         rooms.add(new Room("Living Room"));
         rooms.add(new Room("Bedroom"));
-      }
     }
+}
+
+```
