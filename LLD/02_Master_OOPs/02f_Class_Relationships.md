@@ -390,7 +390,7 @@ public class RealizationDemo {
 
 Here is a **simplified library management system** that demonstrates all five relationships at once:
 
-![LIBRARY_MANAGEMENT_SYSTEM](../IMAGES/1_LIBRARY_MANAGEMENT_SYSTEM.png)
+![LIBRARY_MANAGEMENT_SYSTEM](../../IMAGES/1_LIBRARY_MANAGEMENT_SYSTEM.png)
 
 ### 🧩 Explanation
 
